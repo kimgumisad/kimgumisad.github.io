@@ -21,7 +21,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (orientation: landscape) {
 
     *,
     ::after,
@@ -95,7 +95,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (orientation: portrait) {
 
     *,
     ::after,
@@ -114,10 +114,8 @@
     }
 
     h1 {
-        z-index: 5;
         animation: fade-in-top 1.5s ease;
         position: relative;
-        display: block;
         font-size: 5vw;
         text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
         font-family: 'Barlow Condensed', sans-serif;
@@ -125,12 +123,10 @@
     }
 
     p {
-        z-index: 6;
         animation: appearing 10s ease;
         position: relative;
         text-align: center;
         font-size: 2vw;
-        bottom: -70vw;
         text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
         font-family: 'Barlow Condensed', sans-serif;
         color: white;
@@ -147,26 +143,22 @@
         width: 100vw;
         height: 100vh;
         overflow: hidden;
+        justify-content: center;
+        align-items: center;
     }
 
     .left-image {
-        top: 50vw;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        justify-content: center;
+        text-align: center;
         border-radius: 2vw;
-        display: flex;
-        position: absolute;
+        position: relative;
         width: 40vw;
         height: 55vw;
     }
-
     .right-image {
-        bottom: 10vw;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        text-align: center;
         border-radius: 2vw;
-        display: flex;
-        position: absolute;
+        position: relative;
         width: 40vw;
         height: 55vw;
     }
