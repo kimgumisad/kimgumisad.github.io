@@ -1,27 +1,163 @@
-<!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<meta name="viewport"
-    content="height=device-height,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="icon" href="logo.png">
-<link rel="stylesheet" type="text/css" href="styles.css">
-<title>KIM GUMISAD</title>
+@keyframes fade-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
 
-<body>
-    <section>
-        <div>
-            <h1>Welcome to my website Ma'am Mace Espiritu</h1>
-        </div>
-        <div>
-            <img src="photo1.jpg" alt="photo1" class="left-image">
-        </div>
-        <div>
-            <img src="photo2.jpg" alt="photo2" class="right-image">
-        </div>
-        <div>
-            <p>thank you ma'am for teaching us, your the best math teacher.</p>
-        </div>
-    </section>
-</body>
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-</html>
+}
+
+@keyframes appearing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (orientation: landscape) {
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+    }
+
+    h1 {
+        animation: fade-in-top 1.5s ease;
+        position: relative;
+        display: block;
+        font-size: 5vw;
+        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
+        font-family: 'Barlow Condensed', sans-serif;
+        color: white;
+    }
+
+    p {
+        margin-top: 20vw;
+        animation: appearing 10s ease;
+        position: relative;
+        font-size: 2vw;
+        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
+        font-family: 'Barlow Condensed', sans-serif;
+        color: white;
+    }
+
+    section {
+        text-align: center;
+        background-image: url('design-a.svg');
+        background-color: #545454;
+        position: absolute;
+        z-index: 4;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .left-image {
+        top: 10vw;
+        right: 20vw;
+        border-radius: 2vw;
+        display: flex;
+        position: absolute;
+        width: 17vw;
+        height: 22vw;
+    }
+
+    .right-image {
+        top: 10vw;
+        left: 20vw;
+        border-radius: 2vw;
+        display: flex;
+        position: absolute;
+        width: 17vw;
+        height: 22vw;
+    }
+}
+
+@media screen and (orientation: portrait) {
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+    }
+
+    h1 {
+        animation: fade-in-top 1.5s ease;
+        position: relative;
+        font-size: 5vw;
+        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
+        font-family: 'Barlow Condensed', sans-serif;
+        color: white;
+    }
+
+    p {
+        animation: appearing 10s ease;
+        position: relative;
+        text-align: center;
+        font-size: 2vw;
+        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
+        font-family: 'Barlow Condensed', sans-serif;
+        color: white;
+    }
+
+    section {
+        text-align: center;
+        background-image: url('design-a.svg');
+        background-color: #545454;
+        position: absolute;
+        z-index: 4;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-image {
+        justify-content: center;
+        text-align: center;
+        border-radius: 2vw;
+        position: relative;
+        width: 40vw;
+        height: 55vw;
+    }
+
+    .right-image {
+        text-align: center;
+        border-radius: 2vw;
+        position: relative;
+        width: 40vw;
+        height: 55vw;
+    }
+}
