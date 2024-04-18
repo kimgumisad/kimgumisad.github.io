@@ -34,12 +34,11 @@
         padding: 0;
         width: auto;
         overflow-x: hidden;
-        overflow-y: hidden;
+        overflow-y: auto;
         scroll-behavior: smooth;
     }
 
     h1 {
-        z-index: 5;
         animation: fade-in-top 1.5s ease;
         position: relative;
         display: block;
@@ -50,12 +49,10 @@
     }
 
     p {
-        z-index: 6;
+        margin-top: 20vw;
         animation: appearing 10s ease;
         position: relative;
-        text-align: center;
         font-size: 2vw;
-        bottom: -18vw;
         text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
         font-family: 'Barlow Condensed', sans-serif;
         color: white;
@@ -155,6 +152,7 @@
         width: 40vw;
         height: 55vw;
     }
+
     .right-image {
         text-align: center;
         border-radius: 2vw;
