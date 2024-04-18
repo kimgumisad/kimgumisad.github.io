@@ -1,0 +1,70 @@
+@keyframes fade-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+@keyframes appearing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+  }
+@media screen and (min-width: 768px) {
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: rgba(0, 0, 0, 0.7);
+        background-image: url('design-a.svg');
+    }
+    h1 {
+        animation: fade-in-top 1.5s ease;
+        position: relative;
+        display: block;
+        width: auto;
+        font-size: 8vh;
+        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
+        font-family: 'Barlow Condensed', sans-serif;
+        color: white;
+    }
+    p {
+        animation: appearing 10s ease;
+        position: relative;
+        text-align: center;
+        font-size: 5vh;
+        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
+        font-family: 'Barlow Condensed', sans-serif;
+        color: white;
+    }
+    div {
+        text-align: center;
+    }
+    img {
+        border-radius: 4vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        position:relative;
+        width: 40vw;
+        height: 55vh;
+    }
+}
