@@ -10,18 +10,25 @@
 <body>
     <section>
         <div>
-            <h1>Welcome to my website Ma'am Mace Espiritu</h1>
-        </div>
-        <div>
-            <img src="photo1.jpg" alt="photo1" class="left-image">
-        </div>
-        <div>
-            <img src="photo2.jpg" alt="photo2" class="right-image">
+            <h1></h1>
         </div>
         <div>
             <p>thank you ma'am for teaching us, your the best math teacher.</p>
         </div>
+        <div>   
+            <video class="video" loop>
+                <source src="vids.mp4" type="video/mp4">
+            </video>
+        </div>
     </section>
+    <script>
+        document.addEventListener("click", function() { 
+          var video = document.querySelector('.video');
+          video.style.opacity = "1";
+          video.play();
+          video.classList.add("video-clicked");
+        });
+        </script>
 </body>
 
 </html>

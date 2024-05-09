@@ -1,12 +1,10 @@
 @keyframes fade-in-top {
     0% {
         opacity: 0;
-        transform: translateY(-200px);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
     }
 
 }
@@ -21,6 +19,87 @@
     }
 }
 
+@media screen and (orientation: portrait) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        scroll-behavior: smooth;
+    }
+
+    h1::after {
+        content: "CHANGE VIEW TO LANDSCAPE";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        font-size: 5vw;
+        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
+        font-family: 'Barlow Condensed', sans-serif;
+        color: black;
+        z-index: 20;
+        /* Ensure it's on top of other content */
+    }
+
+    h1 {
+
+        content: "Initial Text";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        font-size: 5vw;
+        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
+        font-family: 'Barlow Condensed', sans-serif;
+        color: black;
+        z-index: 20;
+        /* Ensure it's on top of other content */
+    }
+
+    p {
+        visibility: hidden;
+        margin-top: 20vw;
+        animation: appearing 10s ease;
+        position: relative;
+        font-size: 2vw;
+        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
+        font-family: 'Barlow Condensed', sans-serif;
+        color: black;
+    }
+
+    section {
+        text-align: center;
+        background-color: #FFF;
+        position: absolute;
+        display: flex;
+        background-position: center;
+        align-content: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video {
+        visibility: hidden;
+        opacity: 0.8;
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+        width: 80vw;
+        height: 120vh;
+        object-fit: cover;
+    }
+}
+
 @media screen and (orientation: landscape) {
 
     *,
@@ -29,135 +108,74 @@
         box-sizing: border-box;
     }
 
+    .video-clicked {
+        animation: fade-in-top 15s ease;
+        opacity: 1;
+        /* Ensure opacity is set to 1 to start the animation */
+    }
+
     body {
         margin: 0;
         padding: 0;
-        width: auto;
-        overflow-x: hidden;
-        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
         scroll-behavior: smooth;
     }
 
-    h1 {
+    h1::after {
+        content: "Welcome to my website Ma'am Mace Espiritu";
         animation: fade-in-top 1.5s ease;
-        position: relative;
+        position: absolute;
+        z-index: 22;
         display: block;
-        font-size: 5vw;
+        font-size: 2vw;
         text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
         font-family: 'Barlow Condensed', sans-serif;
-        color: white;
+        color: black;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     p {
         margin-top: 20vw;
         animation: appearing 10s ease;
-        position: relative;
-        font-size: 2vw;
+        position: absolute;
+        bottom: 0;
+        z-index: 22;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.3vw;
         text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
         font-family: 'Barlow Condensed', sans-serif;
-        color: white;
+        color: black;
     }
 
     section {
         text-align: center;
-        background-image: url('design-a.svg');
-        background-color: #545454;
+        background-image: url('logo.png');
+        background-color: #FFF;
         position: absolute;
-        z-index: 4;
+        display: flex;
+        background-position: center;
+        align-content: center;
         background-repeat: no-repeat;
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .left-image {
-        top: 10vw;
-        right: 20vw;
-        border-radius: 2vw;
-        display: flex;
-        position: absolute;
-        width: 17vw;
-        height: 22vw;
-    }
-
-    .right-image {
-        top: 10vw;
-        left: 20vw;
-        border-radius: 2vw;
-        display: flex;
-        position: absolute;
-        width: 17vw;
-        height: 22vw;
-    }
-}
-
-@media screen and (orientation: portrait) {
-
-    *,
-    ::after,
-    ::before {
-        box-sizing: border-box;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        width: auto;
+        background-size: contain;
+        width: 100%;
         height: 100%;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        scroll-behavior: smooth;
     }
 
-    h1 {
-        animation: fade-in-top 1.5s ease;
-        position: relative;
-        font-size: 5vw;
-        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
-        font-family: 'Barlow Condensed', sans-serif;
-        color: white;
-    }
-
-    p {
-        animation: appearing 10s ease;
-        position: relative;
-        text-align: center;
-        font-size: 2vw;
-        text-shadow: 2px 2px 4px rgba(252, 249, 249, 0.5);
-        font-family: 'Barlow Condensed', sans-serif;
-        color: white;
-    }
-
-    section {
-        text-align: center;
-        background-image: url('design-a.svg');
-        background-color: #545454;
-        position: absolute;
-        z-index: 4;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .left-image {
-        justify-content: center;
-        text-align: center;
-        border-radius: 2vw;
-        position: relative;
-        width: 40vw;
-        height: 55vw;
-    }
-
-    .right-image {
-        text-align: center;
-        border-radius: 2vw;
-        position: relative;
-        width: 40vw;
-        height: 55vw;
+    .video {
+        opacity: 0;
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
